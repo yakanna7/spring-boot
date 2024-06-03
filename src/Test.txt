@@ -1,0 +1,31 @@
+
+
+@GetMapping("/student")
+public Student getStudent(@RequestParam String emailId){
+
+       studentService.getStudentBYEmailId(emaiId);
+
+}
+
+
+
+@GetMapping("/student/{studentId}")
+public Student getStudentById(@PathVariable String studentId){
+
+       studentService.getStudentById(studentId);
+
+}
+
+
+
+Map<String, Integer> map = new HashMap<>();
+
+map.put("Ravi", 22);
+
+    map.keySet().steram().sorted(Map.Entry.comparingByValue()).collection(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+
+
+  empList.stream().filter(emp-> emp.getDoj().getMonth() == new Date().getMonth()).collect(Collectors.toList());
+
+
