@@ -4,7 +4,12 @@ import com.student.application.student_application.dto.StudentCourseDTO;
 import com.student.application.student_application.dto.StudentDTO;
 import com.student.application.student_application.entity.Student;
 import com.student.application.student_application.entity.User;
+import com.student.application.student_application.service.AccountService;
 import com.student.application.student_application.service.StudentService;
+import lombok.extern.slf4j.Slf4j;
+import lombok.extern.slf4j.XSlf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +17,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/students")
+@Slf4j
 public class StudentController {
+
+
     @Autowired
     private StudentService studentService;
 
@@ -33,6 +41,11 @@ public class StudentController {
 
     @GetMapping
     public List<Student> getAllStudents() {
+        log.info("Logger Info message");
+        log.debug("Logger Debug message");
+        log.trace("Trace Message");
+        log.error("Error message");
+        log.warn("Warn message");
         return studentService.getAllStudents();
     }
 
