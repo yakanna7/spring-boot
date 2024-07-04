@@ -29,7 +29,7 @@
               daily and when file size is 10MB-->
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_PATH}/archived/${LOG_FILE_NAME}-%d{yyyy-MM-dd}.%i.log
+            <fileNamePattern>${LOG_PATH}/archived/${LOG_FILE_NAME}-%d{yyyy-MM-dd_HH-mm-ss}.%i.log
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                     class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -40,11 +40,10 @@
 
 
 
-    <logger name="com.student.application.student_application" level="DEBUG" additivity="false">
+ <!--   <logger name="com.student.application.student_application" level="DEBUG" additivity="false">
         <appender-ref ref="ConsoleOutput" />
-        <!-- Uncomment if you also want to log to a file -->
         <appender-ref ref="LogFile" />
-    </logger>
+    </logger>-->
 
 
 
