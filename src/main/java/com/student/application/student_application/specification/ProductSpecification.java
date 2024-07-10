@@ -37,6 +37,10 @@ public class ProductSpecification {
                 predicates.add(criteriaBuilder.greaterThanOrEqualTo(root.get("rating"), filter.getRating()));
             }
 
+            if(filter.getMinCost() != null && filter.getMaxCost() != null){
+                predicates.add(criteriaBuilder.between(root.get("cost"), filter.getMinCost(), filter.getMaxCost() ));
+            }
+
             return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
         };
     }

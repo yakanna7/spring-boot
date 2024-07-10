@@ -5,11 +5,13 @@ import com.student.application.student_application.filters.ProductFilter;
 import com.student.application.student_application.repository.MyProductRepository;
 import com.student.application.student_application.specification.ProductSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service("productService1")
+@Primary
 
 public class MyProductServiceImpl  implements  MyProductService{
 

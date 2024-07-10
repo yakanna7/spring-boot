@@ -17,6 +17,7 @@ import java.util.List;
 @RequestMapping("/myproducts")
 public class MyProductController {
     @Autowired
+    //@Qualifier("productService2")
     MyProductService myProductService;
     @GetMapping("/filters")
     public List<MyProduct> getProductsByFilter(@RequestBody  ProductFilter filter){
