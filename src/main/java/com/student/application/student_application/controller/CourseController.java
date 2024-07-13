@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/v1/courses")
+@RequestMapping("/courses")
 public class CourseController {
     @Autowired
     private CourseService courseService;
