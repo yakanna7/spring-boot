@@ -30,9 +30,10 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public void saveStudent(StudentDTO studentDTO) {
+    public StudentDTO saveStudent(StudentDTO studentDTO) {
         Student student = modelMapper.map(studentDTO, Student.class);
-        studentRepository.save(student);
+        Student studentCopy = studentRepository.save(student);
+       return  modelMapper.map(studentCopy, StudentDTO.class);
     }
 
     @Override

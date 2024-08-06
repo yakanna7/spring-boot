@@ -11,7 +11,7 @@ import java.util.List;
 public interface StudentService {
     List<Student> getAllStudents();
 
-    void saveStudent(StudentDTO studentDTO);
+    StudentDTO saveStudent(StudentDTO studentDTO);
 
     Student getStudentById(Long id);
 

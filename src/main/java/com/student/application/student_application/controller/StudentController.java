@@ -69,8 +69,8 @@ public class StudentController {
 
 
     @PostMapping("/save")
-    public void saveStudent(@RequestBody StudentDTO studentDTO) {
-         studentService.saveStudent(studentDTO);
+    public StudentDTO saveStudent(@RequestBody StudentDTO studentDTO) {
+         return studentService.saveStudent(studentDTO);
     }
 
     @PutMapping("/update/{id}")
